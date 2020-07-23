@@ -25,7 +25,7 @@ class Database():
 
     def connect(self):
         db = connect(passwd=config("DB_PASSWORD"), db=config("DB_NAME"),
-                             user=config("DB_USER"), host=config("DB_HOST"))
+                             user=config("DB_USER"), host=config("DB_HOST"), charset=config("CHARSET"))
         self.cursor = db.cursor()
         self.db = db
 
